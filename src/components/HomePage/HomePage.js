@@ -7,7 +7,7 @@ export default function HomePage(theme) {
     <ThemeProvider theme={theme}>
       <S.HomePageWrapper>
         <S.Hello>
-          <h1>Hello</h1>
+          <h1>Hello you little virgin boy.</h1>
         </S.Hello>
       </S.HomePageWrapper>
     </ThemeProvider>
