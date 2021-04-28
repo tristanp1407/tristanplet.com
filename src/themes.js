@@ -3,11 +3,14 @@ import { createGlobalStyle } from "styled-components";
 export const lightTheme = {
   body: "#fff",
   fontColor: "#1E1E1E",
+  backgroundColor: "#2E2541",
+  pageColor: "white",
 };
 
 export const darkTheme = {
-  body: "#272B2F",
-  fontColor: "white",
+  backgroudColor: "#101313",
+  body: "#101313",
+  fontColor: "#f2f2f2",
 };
 
 const GlobalStyles = createGlobalStyle`

@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles, { lightTheme, darkTheme } from "./themes";
 import ToggleThemeButton from "./components/ToggleThemeButton/ToggleThemeButton";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -14,7 +15,10 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <ToggleThemeButton themeToggler={themeToggler} />
+      <NavBar>
+        <ToggleThemeButton themeToggler={themeToggler} />
+      </NavBar>
+
       <BrowserRouter>
         <Route theme={theme} component={HomePage} path="/" exact />
       </BrowserRouter>
