@@ -5,20 +5,36 @@ import OneJob from "./OneJob/OneJob";
 export default function Work() {
   let jobs = {
     job1: {
-      title: "Job1",
-      listItems: ["allez les bleus", "et 1 et 2 et 3 zero", "ici c'est paris"],
+      title: "IBM",
+      listItems: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      ],
     },
     job2: {
-      title: "Job2",
-      listItems: ["allez les bleus", "et 1 et 2 et 3 zero", "ici c'est paris"],
+      title: "Bulb",
+      listItems: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      ],
     },
     job3: {
-      title: "Job3",
-      listItems: ["allez les bleus", "et 1 et 2 et 3 zero", "ici c'est paris"],
+      title: "Proper Mugs",
+      listItems: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      ],
     },
     job4: {
-      title: "Job4",
-      listItems: ["allez les bleus", "et 1 et 2 et 3 zero", "ici c'est paris"],
+      title: "T-Shirts",
+      listItems: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      ],
     },
   };
 

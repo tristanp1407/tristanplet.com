@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 20px auto 30px ${(props) => props.marginLeft};
+  max-width: 600px;
 `;
 
 export const Title = styled.h1`
