@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./ToolKit.styled";
 
 export default function ToolKit() {
-  let text1 = "tools: [text]";
   return (
     <S.Container>
       <h2>Tools/years</h2>

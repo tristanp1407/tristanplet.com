@@ -6,11 +6,11 @@ export const Document = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 `;
 
 export const Section = styled.div`
-  width: 100vw;
+  /* width: 90vw; */
   min-height: ${(props) => props.minHeight || "0"};
   display: flex;
   flex-direction: column;
