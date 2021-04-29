@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
 export const Header = styled.h3`
-  margin: auto auto auto 10vw;
+  margin: 10vh auto 10vh auto;
   color: ${(props) => props.theme.fontColor};
 `;
