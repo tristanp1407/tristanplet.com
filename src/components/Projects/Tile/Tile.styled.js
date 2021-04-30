@@ -63,6 +63,6 @@ export const ToolsList = styled.div`
 export const ToolPill = styled.div`
   border-radius: 50px;
   padding: 3px 8px;
-  background-color: lightpink;
+  background-color: ${(props) => props.backgroundColor};
   margin: 5px 5px auto auto;
 `;

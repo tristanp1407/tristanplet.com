@@ -16,18 +16,16 @@ export default function Tile(props) {
           <S.ProjectTitle>{props.name}</S.ProjectTitle>
         </a>
 
-        <S.ProjectDescription onClick={() => alertMe()}>
-          {props.description}
-        </S.ProjectDescription>
+        <S.ProjectDescription>{props.description}</S.ProjectDescription>
       </S.ProjectInfo>
       <S.ToolsList>
-        {/* {props.tools.map((tool, i) => {
+        {props.tools.map((tool, i) => {
           return (
             <S.ToolPill index={i} backgroundColor={tool.color}>
               {tool.name}
             </S.ToolPill>
           );
-        })} */}
+        })}
       </S.ToolsList>
     </S.OneProject>
   );

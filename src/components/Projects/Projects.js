@@ -18,7 +18,7 @@ export default function Projects() {
       link: "https://mypersiankitchen.co.uk/",
       tools: [
         { name: "React", color: "lightblue" },
-        { name: "Sanity", color: "lightred" },
+        { name: "Sanity", color: "red" },
       ],
     },
     {
@@ -29,7 +29,7 @@ export default function Projects() {
       link: "https://feraltrip.com/",
       tools: [
         { name: "React", color: "lightpink" },
-        { name: "MapBox", color: "darkblue" },
+        { name: "MapBox", color: "blue" },
       ],
     },
     {
@@ -38,6 +38,10 @@ export default function Projects() {
         "A description of the website will go here, explain what it does and how extremely useful it is.",
       image: CardLogo,
       link: "https://cardy-b.netlify.app/",
+      tools: [
+        { name: "React", color: "lightpink" },
+        { name: "MapBox", color: "blue" },
+      ],
     },
     {
       name: "SmallSips",
@@ -45,6 +49,10 @@ export default function Projects() {
         "A description of the website will go here, explain what it does and how extremely useful it is.",
       image: SmallSipsLogo,
       link: "https://smallsips.netlify.app/",
+      tools: [
+        { name: "React", color: "lightpink" },
+        { name: "MapBox", color: "blue" },
+      ],
     },
     {
       name: "BookerBee",
@@ -52,6 +60,10 @@ export default function Projects() {
         "A description of the website will go here, explain what it does and how extremely useful it is.",
       image: SlackLogo,
       link: "https://slack.com/",
+      tools: [
+        { name: "React", color: "lightpink" },
+        { name: "MapBox", color: "blue" },
+      ],
     },
   ];
 
