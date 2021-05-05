@@ -6,14 +6,17 @@ export const OneProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-between;
+  margin: 20px auto;
 `;
 
 export const Tile = styled.a`
   height: 250px;
   width: ${tileWidth};
+  /* max-width: ${tileWidth}; */
   border-radius: 20px;
-  /* border: 1px solid darkgray; */
-  margin: 40px 40px 0 0;
+  /* margin: 40px 40px 0 0; */
+  margin: 20px auto;
   overflow: hidden;
 `;
 
@@ -44,10 +47,14 @@ export const ProjectInfo = styled.div`
 export const ProjectTitle = styled.h3`
   margin: 15px 0 0 0;
 
+  @media (max-width: 768px) {
+    margin: 0;
+  }
   :hover {
     opacity: 0.9;
   }
 `;
+
 export const ProjectDescription = styled.p`
   margin: 5px 0 0 0;
   max-width: ${tileWidth};

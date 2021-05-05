@@ -5,4 +5,7 @@ export const Container = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;

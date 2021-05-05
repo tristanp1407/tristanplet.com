@@ -15,9 +15,9 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      <NavBar>
+      {/* <NavBar>
         <ToggleThemeButton themeToggler={themeToggler} />
-      </NavBar>
+      </NavBar> */}
 
       <BrowserRouter>
         <Route theme={theme} component={HomePage} path="/" exact />

@@ -17,4 +17,9 @@ export const Section = styled.div`
   align-items: ${(props) => props.alignItems};
   margin: auto;
   padding-left: 10vw;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    align-items: center;
+  }
 `;
