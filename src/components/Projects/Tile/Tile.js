@@ -2,10 +2,6 @@ import React from "react";
 import * as S from "./Tile.styled";
 
 export default function Tile(props) {
-  const alertMe = () => {
-    console.log(props.tools);
-  };
-
   return (
     <S.OneProject>
       <S.Tile href={props.href} target="_blank">

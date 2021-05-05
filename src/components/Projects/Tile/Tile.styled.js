@@ -65,4 +65,7 @@ export const ToolPill = styled.div`
   padding: 3px 8px;
   background-color: ${(props) => props.backgroundColor};
   margin: 5px 5px auto auto;
+  color: #f2f2f2;
+  font-weight: bold;
+  font-size: 13px;
 `;
