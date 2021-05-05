@@ -10,7 +10,6 @@ export const Document = styled.div`
 `;
 
 export const Section = styled.div`
-  /* width: 90vw; */
   min-height: ${(props) => props.minHeight || "0"};
   display: flex;
   flex-direction: column;

@@ -4,10 +4,15 @@ import * as S from "./AboutMe.styled";
 export default function AboutMe() {
   return (
     <S.Container>
-      <S.Tile></S.Tile>
-      <S.Tile></S.Tile>
-      <S.Tile></S.Tile>
-      <S.Tile></S.Tile>
+      <S.Wrapper>
+        <S.OneItem>ONE BOX</S.OneItem>
+        <S.OneItem>ONE BOX</S.OneItem>
+        <S.OneItem>ONE BOX</S.OneItem>
+        <S.OneItem>ONE BOX</S.OneItem>
+        <S.OneItem>ONE BOX</S.OneItem>
+        <S.OneItem>ONE BOX</S.OneItem>
+        <S.OneItem>ONE BOX</S.OneItem>
+      </S.Wrapper>
     </S.Container>
   );
 }

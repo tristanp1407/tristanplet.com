@@ -33,6 +33,14 @@ export default function Projects() {
       tools: [tools.react, tools.sanity, tools.styledComponents],
     },
     {
+      name: "BookerBee",
+      description:
+        "A description of the website will go here, explain what it does and how extremely useful it is.",
+      image: SlackLogo,
+      link: "https://slack.com/",
+      tools: [tools.node, tools.slack],
+    },
+    {
       name: "Feral Trip",
       description:
         "A description of the website will go here, explain what it does and how extremely useful it is.",
@@ -55,14 +63,6 @@ export default function Projects() {
       image: SmallSipsLogo,
       link: "https://smallsips.netlify.app/",
       tools: [tools.vue, tools.axios],
-    },
-    {
-      name: "BookerBee",
-      description:
-        "A description of the website will go here, explain what it does and how extremely useful it is.",
-      image: SlackLogo,
-      link: "https://slack.com/",
-      tools: [tools.node, tools.slack],
     },
   ];
 
