@@ -6,18 +6,21 @@ export const OneProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
-  margin: 20px auto;
+  margin: 0 50px 50px 0;
+
+  @media (max-width: 768px) {
+    margin: 20px auto;
+  }
 `;
 
 export const Tile = styled.a`
   height: 250px;
   width: ${tileWidth};
-  /* max-width: ${tileWidth}; */
   border-radius: 20px;
-  /* margin: 40px 40px 0 0; */
-  margin: 20px auto;
   overflow: hidden;
+  @media (max-width: 768px) {
+    margin: 20px 0;
+  }
 `;
 
 export const IMG = styled.img`
