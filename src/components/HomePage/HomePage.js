@@ -7,6 +7,7 @@ import Projects from "../Projects/Projects";
 import ToolKit from "../ToolKit/ToolKit";
 import Work from "../Work/Work";
 import AboutMe from "../AboutMe/AboutMe";
+import Accordion from "../Work/Accordion/Accordion";
 
 export default function HomePage(theme) {
   return (
@@ -16,7 +17,7 @@ export default function HomePage(theme) {
           <Hello />
         </S.Section>
 
-        <SectionHeader text={"projects"} />
+        <SectionHeader text={"some things I've built"} />
 
         <S.Section alignItems={"center"}>
           <Projects />
@@ -26,13 +27,14 @@ export default function HomePage(theme) {
           <ToolKit />
         </S.Section>
 
-        <SectionHeader text={"work"} />
+        <SectionHeader text={"where I've worked"} />
 
         <S.Section alignItems={"flex-start"}>
+          <Accordion />
           <Work />
         </S.Section>
 
-        <SectionHeader text={"about me"} />
+        <SectionHeader text={"other things I like to do"} />
         <S.Section>
           <AboutMe />
         </S.Section>

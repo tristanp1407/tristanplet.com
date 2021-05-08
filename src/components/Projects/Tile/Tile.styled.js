@@ -47,7 +47,7 @@ export const ProjectInfo = styled.div`
   }
 `;
 
-export const ProjectTitle = styled.h3`
+export const ProjectTitle = styled.h2`
   margin: 15px 0 0 0;
 
   @media (max-width: 768px) {

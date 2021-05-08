@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 
 export const Wrapper = styled.div`

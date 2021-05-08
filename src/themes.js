@@ -8,9 +8,10 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
-  backgroundColor: "#101313",
+  // backgroundColor: "#101313",
+  backgroundColor: "#181A24",
   // backgroudColor: "#17101A",
-  body: "#101313",
+  body: "#181A24",
   fontColor: "#f2f2f2",
 };
 

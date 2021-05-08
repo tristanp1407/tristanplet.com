@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   margin: 20px auto 30px ${(props) => props.marginLeft};
   max-width: 600px;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
 `;
 
 export const Title = styled.h1`
