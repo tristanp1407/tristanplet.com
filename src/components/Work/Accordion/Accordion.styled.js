@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: ${(props) => props.theme.fontColor};
-  width: 100%;
+  width: 80vw;
 `;
 
 export const Wrapper = styled.div`
@@ -15,6 +15,7 @@ export const Wrap = styled.div`
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  border-bottom: 1px solid white;
 
   cursor: pointer;
 
@@ -24,5 +25,10 @@ export const Wrap = styled.div`
 `;
 
 export const DropDown = styled.div`
-  /*  */
+  padding: 30px 0;
+
+  li {
+    list-style: none;
+    margin: 30px 0;
+  }
 `;

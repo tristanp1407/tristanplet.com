@@ -5,7 +5,6 @@ import Hello from "../Hello/Hello";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Projects from "../Projects/Projects";
 import ToolKit from "../ToolKit/ToolKit";
-import Work from "../Work/Work";
 import AboutMe from "../AboutMe/AboutMe";
 import Accordion from "../Work/Accordion/Accordion";
 
@@ -31,7 +30,6 @@ export default function HomePage(theme) {
 
         <S.Section alignItems={"flex-start"}>
           <Accordion />
-          <Work />
         </S.Section>
 
         <SectionHeader text={"other things I like to do"} />

@@ -6,7 +6,7 @@ export const OneProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 50px 50px 0;
+  margin: 0 50px 80px 0;
 
   @media (max-width: 768px) {
     margin: 20px auto;
@@ -40,27 +40,36 @@ export const ProjectInfo = styled.div`
   flex-direction: column;
   align-items: flex-start;
   color: ${(props) => props.theme.fontColor};
+`;
 
-  a {
-    text-decoration: none;
-    color: ${(props) => props.theme.fontColor};
+export const TitleWrapper = styled.a`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: ${(props) => props.theme.fontColor};
+  margin: 15px 0 10px 0;
+
+  svg {
+    transition: transform 0.5s;
+  }
+
+  :hover > svg {
+    transform: rotate(360deg);
   }
 `;
 
 export const ProjectTitle = styled.h2`
-  margin: 15px 0 0 0;
-
-  @media (max-width: 768px) {
-    margin: 0;
-  }
+  margin: 0 5px 0 0;
   :hover {
     opacity: 0.9;
   }
 `;
 
 export const ProjectDescription = styled.p`
-  margin: 5px 0 0 0;
   max-width: ${tileWidth};
+  margin: 0;
 `;
 
 export const ToolsList = styled.div`
@@ -68,6 +77,7 @@ export const ToolsList = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
+  margin-top: 10px;
 `;
 
 export const ToolPill = styled.div`

@@ -22,6 +22,7 @@ const GlobalStyles = createGlobalStyle`
 body{
     font-family: 'Rubik', sans-serif;
     font-weight: 300;
+    font-size: 1.25rem;
 }
 
 
