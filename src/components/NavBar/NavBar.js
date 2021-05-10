@@ -1,10 +1,12 @@
 import React from "react";
 import * as S from "./NavBar.styled";
+import ToggleThemeButton from "../ToggleThemeButton/ToggleThemeButton";
 
-export default function NavBar() {
+export default function NavBar(props) {
   return (
     <S.Container>
       <div>tristanplet</div>
+      <ToggleThemeButton themeToggler={props.themeToggler} />
       <div>
         <S.LinksContainer>
           <li>work</li>

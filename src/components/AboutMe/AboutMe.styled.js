@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Shadow = styled.div`
-  width: 50px;
+  width: 150px;
   position: absolute;
   height: 100%;
   top: 0;
@@ -25,7 +25,7 @@ export const Shadow = styled.div`
   background-image: linear-gradient(
     to right,
     transparent,
-    ${(props) => props.theme.backgroundColor}
+    ${(props) => props.theme.body}
   );
 `;
 
@@ -34,5 +34,5 @@ export const OneItem = styled.div`
   height: 400px;
   line-height: 400px;
   text-align: center;
-  color: white;
+  color: ${(props) => props.theme.fontColor};
 `;

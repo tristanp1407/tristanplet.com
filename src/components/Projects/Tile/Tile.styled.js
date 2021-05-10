@@ -6,7 +6,7 @@ export const OneProject = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0 50px 80px 0;
+  margin: 0 70px 80px 0;
 
   @media (max-width: 768px) {
     margin: 20px auto;
@@ -62,8 +62,11 @@ export const TitleWrapper = styled.a`
 
 export const ProjectTitle = styled.h2`
   margin: 0 5px 0 0;
+  border-bottom: 1px solid transparent;
+  transition: 0.5s border-bottom;
+
   :hover {
-    opacity: 0.9;
+    border-bottom: 1px solid ${(props) => props.theme.fontColor};
   }
 `;
 

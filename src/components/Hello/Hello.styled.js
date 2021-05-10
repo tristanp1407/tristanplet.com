@@ -6,4 +6,14 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     margin: auto;
   }
+
+  h1 {
+    font-weight: 300;
+    line-height: 60px;
+  }
+`;
+
+export const TypewriterWrapper = styled.span`
+  font-size: 4rem;
+  font-weight: bold;
 `;

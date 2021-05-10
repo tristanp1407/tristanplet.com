@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import { ThemeProvider } from "styled-components";
 import GlobalStyles, { lightTheme, darkTheme } from "./themes";
-import ToggleThemeButton from "./components/ToggleThemeButton/ToggleThemeButton";
 import NavBar from "./components/NavBar/NavBar";
 
 function App() {
@@ -15,9 +14,7 @@ function App() {
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
-      {/* <NavBar>
-        <ToggleThemeButton themeToggler={themeToggler} />
-      </NavBar> */}
+      <NavBar themeToggler={() => themeToggler()} />
 
       <BrowserRouter>
         <Route theme={theme} component={HomePage} path="/" exact />

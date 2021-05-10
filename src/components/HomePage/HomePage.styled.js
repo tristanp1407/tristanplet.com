@@ -20,8 +20,9 @@ export const Section = styled.div`
   justify-content: flex-start;
   align-items: ${(props) => props.alignItems};
   margin: auto;
-  padding-left: 10vw;
+  /* padding-left: 10vw; */
   width: 90vw;
+  max-width: 1200px;
 
   @media (max-width: 768px) {
     flex-direction: column;

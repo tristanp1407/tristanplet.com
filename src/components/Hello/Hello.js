@@ -5,11 +5,11 @@ import Typewriter from "typewriter-effect";
 export default function Hello() {
   return (
     <S.Container>
-      <h1>
+      <S.TypewriterWrapper>
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .typeString("Hello!")
+              .typeString("Hey!")
               .pauseFor(1500)
               .deleteAll()
               .typeString("Salut!")
@@ -25,8 +25,11 @@ export default function Hello() {
               .start();
           }}
         />
-        My name is Tristan <br />
-        and I'm building this website.
+      </S.TypewriterWrapper>
+
+      <h1>
+        I'm Tristan,
+        <br />a self-taught web developer from London.
       </h1>
     </S.Container>
   );
