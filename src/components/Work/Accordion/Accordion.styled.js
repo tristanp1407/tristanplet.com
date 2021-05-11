@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: ${(props) => props.theme.fontColor};
-  width: 80vw;
-  margin-bottom: 100px;
+  width: 100%;
+  margin-bottom: auto 100px;
 `;
 
 export const Wrapper = styled.div`

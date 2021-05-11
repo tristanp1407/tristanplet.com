@@ -14,6 +14,8 @@ export const darkTheme = {
   fontColor: "#f2f2f2",
 };
 
+export const pageWidth = "1200px";
+
 const GlobalStyles = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');

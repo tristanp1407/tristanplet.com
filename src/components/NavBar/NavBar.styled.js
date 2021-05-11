@@ -1,4 +1,16 @@
 import styled from "styled-components";
+import { pageWidth } from "../../themes";
+
+export const Wrapper = styled.div`
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  top: 0;
+  transform: translate(0px, 50px);
+`;
 
 export const Container = styled.div`
   position: fixed;
@@ -7,11 +19,8 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   color: ${(props) => props.theme.fontColor};
-  width: 100vw;
-
-  div {
-    margin-left: 20px;
-  }
+  width: 100%;
+  max-width: ${pageWidth};
 `;
 
 export const LinksContainer = styled.ul`

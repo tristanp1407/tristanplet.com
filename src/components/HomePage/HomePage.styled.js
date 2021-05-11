@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { pageWidth } from "../../themes";
 
 export const Document = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -22,7 +23,7 @@ export const Section = styled.div`
   margin: auto;
   /* padding-left: 10vw; */
   width: 90vw;
-  max-width: 1200px;
+  max-width: ${pageWidth};
 
   @media (max-width: 768px) {
     flex-direction: column;
