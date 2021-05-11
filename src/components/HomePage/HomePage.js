@@ -15,27 +15,24 @@ export default function HomePage(theme) {
         <S.Section alignItems={"center"} minHeight={"95vh"}>
           <Hello />
         </S.Section>
-
         <SectionHeader text={"some things I've built"} />
-
-        <S.Section alignItems={"center"}>
+        <S.Section id={"projects"} alignItems={"center"}>
           <Projects />
         </S.Section>
-
         <S.Section alignItems={"flex-start"} minHeight={"500px"}>
           <ToolKit />
         </S.Section>
-
         <SectionHeader text={"where I've worked"} />
-
-        <S.Section alignItems={"flex-start"}>
+        <S.Section id={"work"} alignItems={"flex-start"}>
           <Accordion />
         </S.Section>
-
         <SectionHeader text={"other things I like to do"} />
-        <S.Section>
+        <S.Section id={"aboutme"}>
           <AboutMe />
         </S.Section>
+
+        <SectionHeader text={"say hello"} />
+        <S.Section id={"contact"} minHeight={"100vh"}></S.Section>
       </S.Document>
     </ThemeProvider>
   );

@@ -7,11 +7,12 @@ import FeralTripLogo from "../../assets/images/feraltrip_logo.png";
 import CardLogo from "../../assets/images/card_logo.jpeg";
 import SmallSipsLogo from "../../assets/images/cocktail.png";
 import SlackLogo from "../../assets/images/slack.png";
+import ProperMugs from "../../assets/images/propermugs_logo.png";
 
 export default function Projects() {
   let tools = {
-    react: { name: "React", color: "#5FD3F3" },
-    sanity: { name: "Sanity", color: "#EF3F2E" },
+    react: { name: "React", color: "#32cbf2" },
+    sanity: { name: "Sanity CMS", color: "#EF3F2E" },
     mapbox: { name: "MapBox", color: "#0575E0" },
     javascript: { name: "Javascript", color: "#c4b01d" },
     vue: { name: "Vue", color: "#3FB983" },
@@ -21,32 +22,50 @@ export default function Projects() {
     styledComponents: { name: "Styled Components", color: "#DA7192" },
     axios: { name: "Axios", color: "#3B6BE2" },
     slack: { name: "Slack", color: "#601F69" },
+    wix: { name: "Wix", color: "#aaaaaa" },
+    illustrator: { name: "Adobe Illustrator", color: "#f49200" },
   };
 
   let projects = [
     {
       name: "My Persian Kitchen",
       description:
-        "A description of the website will go here, explain what it does and how extremely useful it is.",
+        "Persian cuisine delivered to your door! This page uses Sanity CSM for that the chefs themselves can update their blog. 👩‍🍳",
       image: MPKLogo,
       link: "https://mypersiankitchen.co.uk/",
       tools: [tools.react, tools.sanity, tools.styledComponents],
     },
     {
-      name: "BookerBee",
+      name: "Proper Mugs",
       description:
-        "A description of the website will go here, explain what it does and how extremely useful it is.",
-      image: SlackLogo,
-      link: "https://slack.com/",
-      tools: [tools.node, tools.slack],
+        "Check this if you love coffee! A website created for mine and my friend's new caffeinated venture. ☕️",
+      image: ProperMugs,
+      link: "https://propermugscoffee.com/",
+      tools: [tools.wix, tools.illustrator],
     },
     {
-      name: "Feral Trip",
+      name: "BookerBee",
       description:
-        "A description of the website will go here, explain what it does and how extremely useful it is.",
+        "This little Slack app automatically asks your manager for approval before letting you book onto a course. ",
+      image: SlackLogo,
+      link: "https://github.com/tristanp1407/ef-slackbot",
+      tools: [tools.node, tools.slack],
+    },
+
+    {
+      name: "Feral Trip",
+      description: "My first ever website! Explore the UK's great outdoors.",
       image: FeralTripLogo,
       link: "https://feraltrip.com/",
       tools: [tools.react, tools.mapbox],
+    },
+    {
+      name: "SmallSips",
+      description:
+        "Tasty cocktail recipes made easy. My first project using Vue! 🍸",
+      image: SmallSipsLogo,
+      link: "https://smallsips.netlify.app/",
+      tools: [tools.vue, tools.axios],
     },
     {
       name: "Cardy B",
@@ -55,14 +74,6 @@ export default function Projects() {
       image: CardLogo,
       link: "https://cardy-b.netlify.app/",
       tools: [tools.javascript, tools.html, tools.css],
-    },
-    {
-      name: "SmallSips",
-      description:
-        "A description of the website will go here, explain what it does and how extremely useful it is.",
-      image: SmallSipsLogo,
-      link: "https://smallsips.netlify.app/",
-      tools: [tools.vue, tools.axios],
     },
   ];
 

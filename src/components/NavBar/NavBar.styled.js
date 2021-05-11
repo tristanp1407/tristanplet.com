@@ -1,39 +1,35 @@
 import styled from "styled-components";
-import { pageWidth } from "../../themes";
-
-export const Wrapper = styled.div`
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  top: 0;
-  transform: translate(0px, 50px);
-`;
 
 export const Container = styled.div`
   position: fixed;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   color: ${(props) => props.theme.fontColor};
-  width: 100%;
-  max-width: ${pageWidth};
+  right: 0;
+  margin: 40px;
+  z-index: 100;
+
+  @media (max-width: 768px) {
+    ul {
+      display: none;
+    }
+
+    position: absolute;
+    margin: 20px;
+  }
 `;
 
 export const LinksContainer = styled.ul`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: flex-end;
   list-style-type: none;
   list-style-position: inside;
 
   li {
-    margin: 0 10px;
-  }
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: right;
+    margin-bottom: 10px;
+    cursor: pointer;
   }
 `;

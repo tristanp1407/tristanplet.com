@@ -5,7 +5,16 @@ export const Button = styled.button`
   outline: none;
   margin: 0 0px 0 auto;
   background: none;
-  border: 1px solid ${(props) => props.theme.fontColor};
+  border: none;
   border-radius: 50px;
   padding: 5px 10px;
+`;
+
+export const Input = styled.input`
+  opacity: 0;
+  position: absolute;
+`;
+
+export const Label = styled.label`
+  /*  */
 `;

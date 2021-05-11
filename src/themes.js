@@ -19,9 +19,18 @@ export const pageWidth = "1200px";
 const GlobalStyles = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap'); */
+
+*{
+  font-family: 'Rubik', sans-serif !important;
+  /* font-family: 'Montserrat', sans-serif; */
+
+}
 
 body{
-    font-family: 'Rubik', sans-serif;
+    background-color: ${(props) => props.theme.body};
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');
+    font-family: 'Rubik', sans-serif !important;
     font-weight: 300;
     font-size: 1.25rem;
 }

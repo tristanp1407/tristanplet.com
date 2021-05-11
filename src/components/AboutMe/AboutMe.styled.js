@@ -22,7 +22,7 @@ export const Shadow = styled.div`
   height: 100%;
   top: 0;
   right: 0;
-  background-image: linear-gradient(
+  background: linear-gradient(
     to right,
     transparent,
     ${(props) => props.theme.body}
