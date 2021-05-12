@@ -26,6 +26,9 @@ export const UL = styled.ul`
 
   li {
     margin-right: 5px;
+    @media (max-width: 768px) {
+      margin: 0;
+    }
   }
 `;
 
@@ -37,6 +40,10 @@ export const OneTool = styled.div`
   margin: 0 40px 40px 0;
   cursor: default;
   width: 130px;
+
+  @media (max-width: 768px) {
+    margin: 10px auto;
+  }
 
   :hover > div {
     /* visibility: visible; */
