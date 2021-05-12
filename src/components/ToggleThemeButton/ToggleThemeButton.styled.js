@@ -8,13 +8,5 @@ export const Button = styled.button`
   border: none;
   border-radius: 50px;
   padding: 5px 10px;
-`;
-
-export const Input = styled.input`
-  opacity: 0;
-  position: absolute;
-`;
-
-export const Label = styled.label`
-  /*  */
+  transition: all 0.5s;
 `;

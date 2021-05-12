@@ -21,6 +21,7 @@ export const Tile = styled.a`
   @media (max-width: 768px) {
     margin: 20px 0;
   }
+  box-shadow: 0px 1px 5px 0px rgba(50, 50, 50, 0.3);
 `;
 
 export const IMG = styled.img`
@@ -31,7 +32,7 @@ export const IMG = styled.img`
   transition: 0.3s;
 
   :hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 `;
 
@@ -91,4 +92,5 @@ export const ToolPill = styled.div`
   color: #f2f2f2;
   font-weight: bold;
   font-size: 13px;
+  box-shadow: 0px 1px 3px 0px rgba(50, 50, 50, 0.2);
 `;
