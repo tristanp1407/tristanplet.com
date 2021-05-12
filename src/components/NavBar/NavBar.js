@@ -8,13 +8,13 @@ export default function NavBar(props) {
   let menuItems = [
     { name: "projects", to: "projects" },
     { name: "work", to: "work" },
-    { name: "about me", to: "aboutme" },
+    // { name: "about me", to: "aboutme" },
     { name: "contact", to: "contact" },
   ];
 
   return (
     <S.Container>
-      <S.LinksContainer>
+      {/* <S.LinksContainer>
         {menuItems.map((item) => {
           return (
             <li>
@@ -32,7 +32,7 @@ export default function NavBar(props) {
             </li>
           );
         })}
-      </S.LinksContainer>
+      </S.LinksContainer> */}
       <ToggleThemeButton
         theme={props.theme}
         themeToggler={props.themeToggler}

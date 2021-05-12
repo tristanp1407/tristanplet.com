@@ -1,33 +1,57 @@
 import React from "react";
 import * as S from "./ToolKit.styled";
+import { IconContext } from "react-icons";
+import { RiToolsLine } from "react-icons/ri";
 
-export default function ToolKit() {
+export default function ToolKit(props) {
+  let tools = [
+    "Javascript",
+    "React",
+    "Vue",
+    "Node",
+    "HTML",
+    "CSS",
+    "Tekton",
+    "Terraform",
+    "GitHub",
+    "Docker",
+    "Slack",
+    "Red Hat OpenShift",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Adobe Lightroom",
+    "SQL",
+    "MongoDB",
+    "Design Thinking",
+    "Agile",
+    "AWS",
+    "Sanity",
+    "Netlify",
+  ];
+
   return (
     <S.Container>
-      <h2>Tools/years</h2>
-      <S.ListsWrapper>
-        <S.UL>
-          <li>Javascript</li>
-          <li>React</li>
-          <li>Vue</li>
-          <li>Node</li>
-          <li>HTML</li>
-          <li>CSS</li>
-        </S.UL>
-        <S.UL>
-          <li>Adobe Photoshop</li>
-          <li>Adobe Illustrator</li>
-          <li>Adobe Lightroom</li>
-          <li>SQL</li>
-          <li>Design Thinking</li>
-          <li>AWS Route 53</li>
-        </S.UL>
-        <S.UL>
-          <li>AWS EC2</li>
-          <li>AWS S3</li>
-          <li>Sanity</li> <li>Netlify</li>
-        </S.UL>
-      </S.ListsWrapper>
+      <S.Title>Toolkit</S.Title>
+
+      <S.UL>
+        {tools.map((tool, i) => {
+          return (
+            <S.OneTool>
+              <IconContext.Provider
+                value={{
+                  size: "25px",
+                  color: (props) => props.theme.fontColor,
+                }}
+              >
+                <li key={i}>{tool}</li>
+                <div>
+                  <RiToolsLine />
+                </div>
+              </IconContext.Provider>
+            </S.OneTool>
+          );
+        })}
+      </S.UL>
     </S.Container>
   );
 }

@@ -7,6 +7,7 @@ import Projects from "../Projects/Projects";
 import ToolKit from "../ToolKit/ToolKit";
 import AboutMe from "../AboutMe/AboutMe";
 import Accordion from "../Work/Accordion/Accordion";
+import Contact from "../Contact/Contact";
 
 export default function HomePage(theme) {
   return (
@@ -32,15 +33,17 @@ export default function HomePage(theme) {
           <Accordion />
         </S.Section>
 
-        <SectionHeader text={"other things I like to do"} />
+        {/* <SectionHeader text={"other things I like to do"} />
 
         <S.Section id={"aboutme"}>
           <AboutMe />
-        </S.Section>
+        </S.Section> */}
 
         <SectionHeader text={"say hello"} />
 
-        <S.Section id={"contact"} minHeight={"100vh"}></S.Section>
+        <S.Section id={"contact"} minHeight={"10vh"}>
+          <Contact />
+        </S.Section>
       </S.Document>
     </ThemeProvider>
   );

@@ -33,6 +33,10 @@ body{
     font-family: 'Rubik', sans-serif !important;
     font-weight: 300;
     font-size: 1.25rem;
+
+    ::-webkit-scrollbar{
+      display: none;
+    }
 }
 
 

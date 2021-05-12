@@ -14,7 +14,7 @@ export default function Projects() {
     react: { name: "React", color: "#32cbf2" },
     sanity: { name: "Sanity CMS", color: "#EF3F2E" },
     mapbox: { name: "MapBox", color: "#0575E0" },
-    javascript: { name: "Javascript", color: "#c4b01d" },
+    javascript: { name: "Javascript", color: "#ddc000" },
     vue: { name: "Vue", color: "#3FB983" },
     css: { name: "CSS", color: "#563E7C" },
     node: { name: "Node", color: "#3E863C" },
@@ -70,7 +70,7 @@ export default function Projects() {
     {
       name: "Cardy B",
       description:
-        "A description of the website will go here, explain what it does and how extremely useful it is.",
+        "Shuffle, draw and sort cards. This was a fun challenge for an internal application within IBM. 🃏",
       image: CardLogo,
       link: "https://cardy-b.netlify.app/",
       tools: [tools.javascript, tools.html, tools.css],

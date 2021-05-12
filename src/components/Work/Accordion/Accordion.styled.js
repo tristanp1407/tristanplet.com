@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: ${(props) => props.theme.fontColor};
-  width: 100%;
-  margin-bottom: auto 100px;
+  width: 90%;
+  margin-bottom: 100px;
 `;
 
 export const Wrapper = styled.div`
   width: 100%;
+  margin-bottom: 1vh;
 `;
 
 export const Wrap = styled.div`
@@ -17,8 +18,14 @@ export const Wrap = styled.div`
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid ${(props) => props.theme.fontColor};
-
   cursor: pointer;
+
+  span {
+    transition: all 0.5s;
+  }
+  :hover > span {
+    margin-right: 20px;
+  }
 
   h1 {
     padding: 2rem 0;
@@ -28,7 +35,7 @@ export const Wrap = styled.div`
 export const DropDown = styled.div`
   padding: 30px 0;
 
-  @keyframes slideInFromLeft {
+  @keyframes fadeIn {
     0% {
       opacity: 0;
       /* transform: translateX(-100%); */
@@ -40,7 +47,7 @@ export const DropDown = styled.div`
   }
 
   li {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 1s ease-out 0s 1 fadeIn;
     list-style: none;
     margin: 30px 0;
   }
