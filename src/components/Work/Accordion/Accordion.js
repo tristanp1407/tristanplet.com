@@ -12,7 +12,7 @@ export default function Accordion(props) {
         "As part of my consulting role, I drew insight from client’s application and infrastructure data to support cloud migration strategies.",
         "I attended some really cool technology bootcamps and hackathons, where I learned to apply design thinking and use IBM’s AI and Machine Learning tools to present useful prototypes to clients.",
         "I found my love for styled-components by helping build reusable React components for e-commerce.",
-        "As a giveback project, I built the Node backend for a Slack application to automate the process of obtaining manager approval before booking onto a course. Love Slack!",
+        "As a giveback project, I built the Node backend for a Slack application to automate the process of obtaining manager approval before booking onto a course - Love Slack! I learned to work with APIs to connect to IBM's internal calendar.",
       ],
     },
     {

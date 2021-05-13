@@ -38,7 +38,7 @@ export default function Projects() {
     {
       name: "Proper Mugs",
       description:
-        "Check this if you love coffee! A website created for mine and my friend's new caffeinated venture. ☕️",
+        "Check this if you love coffee! A website for a new caffeinated venture, founded by me and my friends. ☕️",
       image: ProperMugs,
       link: "https://propermugscoffee.com/",
       tools: [tools.wix, tools.illustrator],
