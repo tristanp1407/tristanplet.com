@@ -17,7 +17,9 @@ export default function Contact(props) {
         <S.OneLink onClick={() => openMe("https://github.com/tristanp1407")}>
           <RiGithubFill />
         </S.OneLink>
-        <S.OneLink onClick={() => openMe("www.linkedin.com/in/tristan-plet")}>
+        <S.OneLink
+          onClick={() => openMe("https://www.linkedin.com/in/tristan-plet")}
+        >
           <RiLinkedinBoxFill />
         </S.OneLink>
         <S.OneLink href="mailto:tristan.plet@gmail.com">
