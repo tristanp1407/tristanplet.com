@@ -7,6 +7,8 @@ export const Container = styled.div`
   justify-content: center;
   margin: auto;
 
+  margin-top: 10vh;
+
   color: ${(props) => props.theme.fontColor};
 `;
 
@@ -43,6 +45,15 @@ export const OneTool = styled.div`
 
   @media (max-width: 768px) {
     margin: 10px auto;
+
+    div {
+      display: none;
+    }
+  }
+
+  @media (max-width: 315px) {
+    margin: 10px 0;
+    width: 125px;
   }
 
   :hover > div {

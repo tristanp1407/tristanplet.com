@@ -3,10 +3,10 @@ import styled from "styled-components";
 export const Container = styled.div`
   color: ${(props) => props.theme.fontColor};
 
-  @media (max-width: 768px) {
+  margin-top: 25vh;
+  /* @media (max-width: 768px) {
     margin: auto;
-  }
-
+  } */
   h1 {
     font-weight: 300;
     line-height: 60px;

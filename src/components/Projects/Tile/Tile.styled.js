@@ -15,7 +15,8 @@ export const OneProject = styled.div`
 
 export const Tile = styled.a`
   height: 250px;
-  width: ${tileWidth};
+  width: 95vw;
+  max-width: ${tileWidth};
   border-radius: 20px;
   overflow: hidden;
   @media (max-width: 768px) {
@@ -88,7 +89,7 @@ export const ToolPill = styled.div`
   border-radius: 50px;
   padding: 3px 8px;
   background-color: ${(props) => props.backgroundColor};
-  margin: 5px 5px auto auto;
+  margin: 5px 5px auto 0;
   color: #f2f2f2;
   font-weight: bold;
   font-size: 13px;
