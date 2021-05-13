@@ -12,14 +12,14 @@ export default function Accordion(props) {
         "As part of my consulting role, I drew insight from client’s application and infrastructure data to support cloud migration strategies.",
         "I attended some really cool technology bootcamps and hackathons, where I learned to apply design thinking and use IBM’s AI and Machine Learning tools to present useful prototypes to clients.",
         "I found my love for styled-components by helping build reusable React components for e-commerce.",
-        "As a giveback project, I built a Node application to automate the process of obtaining manager approval to book onto a course through Slack. Love Slack!",
+        "As a giveback project, I built the Node backend for a Slack application to automate the process of obtaining manager approval before booking onto a course. Love Slack!",
       ],
     },
     {
       title: "Proper Mugs",
       listItems: [
-        "Two of my best friends and I founded Proper Mugs to spread the love of good coffee!  We source and package and ship our favourite coffees to customers across the UK.",
-        "I learned to use social media as a marketing tool to generate high volumes of sales, using Adobe Creative Suite to create designs and marketting content.",
+        "Two of my best friends and I founded Proper Mugs to spread the love of good coffee!  We source, package and ship our favourite coffees to customers across the UK.",
+        "I learned to use social media as a marketing tool to generate high volumes of sales, using Adobe Creative Suite to create designs and marketing content.",
         "We’re now learning to roast our own coffee – which is a lot of fun!",
       ],
     },

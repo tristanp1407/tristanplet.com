@@ -7,7 +7,17 @@ export const Button = styled.button`
   background: none;
   border: none;
   border-radius: 50px;
-  padding: 5px 10px;
-  transition: all 0.5s;
+  margin: 5vw 5vw;
+  transition: all 3s;
   cursor: pointer;
+
+  svg {
+    transition: all 0.5s;
+  }
+
+  :hover {
+    svg {
+      transform: scale(1.2) rotate(-90deg);
+    }
+  }
 `;

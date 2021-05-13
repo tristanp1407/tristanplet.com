@@ -67,7 +67,7 @@ export const ProjectTitle = styled.h2`
   transition: 0.5s border-bottom;
 
   :hover {
-    border-bottom: 1px solid ${(props) => props.theme.fontColor};
+    /* border-bottom: 1px solid ${(props) => props.theme.fontColor}; */
   }
 `;
 

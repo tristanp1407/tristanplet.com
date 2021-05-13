@@ -30,7 +30,7 @@ export default function Projects() {
     {
       name: "My Persian Kitchen",
       description:
-        "Persian cuisine delivered to your door! This page uses Sanity CSM for that the chefs themselves can update their blog. 👩‍🍳",
+        "Persian cuisine delivered to your door! This page uses Sanity CSM so that the chefs can update their blog themselves. 👩‍🍳",
       image: MPKLogo,
       link: "https://mypersiankitchen.co.uk/",
       tools: [tools.react, tools.sanity, tools.styledComponents],

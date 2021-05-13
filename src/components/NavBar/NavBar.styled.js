@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   color: ${(props) => props.theme.fontColor};
   right: 0;
-  margin: 40px;
+  margin: 0px;
   z-index: 100;
 
   @media (max-width: 768px) {
@@ -17,7 +17,7 @@ export const Container = styled.div`
     }
 
     position: absolute;
-    margin: 20px;
+    margin: 0px;
   }
 `;
 
