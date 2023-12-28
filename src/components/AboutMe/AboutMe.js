@@ -7,7 +7,7 @@ export default function AboutMe() {
       <S.Copy>
         <strong>
           Fuelled by over five years of dynamic experience in tech,
-        </strong>
+        </strong>{" "}
         I've mastered the art of designing and building top-tier websites from
         scratch. My career path has led me through the fast-paced world of UK's
         booming startups and a strategic consulting role at IBM, sharpening my
