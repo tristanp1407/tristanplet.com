@@ -1,10 +1,14 @@
 import React from "react";
 import * as S from "./Hello.styled";
 import Typewriter from "typewriter-effect";
+import ProfilePhoto from "../../assets/images/profile_photo.jpg";
 
 export default function Hello() {
   return (
     <S.Container>
+      {/* <S.ProfilePhoto>
+        <img src={ProfilePhoto} />
+      </S.ProfilePhoto> */}
       <S.TypewriterWrapper>
         <Typewriter
           onInit={(typewriter) => {
@@ -27,10 +31,7 @@ export default function Hello() {
         />
       </S.TypewriterWrapper>
 
-      <h1>
-        I'm Tristan,
-        <br />a self-taught web developer from London.
-      </h1>
+      <h1>I'm Tristan, welcome to my portfolio 👋</h1>
     </S.Container>
   );
 }

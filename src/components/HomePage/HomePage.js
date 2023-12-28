@@ -23,21 +23,21 @@ export default function HomePage(theme) {
           <Projects />
         </S.Section>
 
-        <S.Section alignItems={"flex-start"} minHeight={"500px"}>
+        {/* <S.Section alignItems={"flex-start"} minHeight={"500px"}>
           <ToolKit />
-        </S.Section>
+        </S.Section> */}
 
-        <SectionHeader text={"where I've worked"} />
+        {/* <SectionHeader text={"where I've worked"} />
 
         <S.Section id={"work"} alignItems={"flex-start"}>
           <Accordion />
-        </S.Section>
+        </S.Section> */}
 
-        {/* <SectionHeader text={"other things I like to do"} />
+        <SectionHeader text={"about me"} />
 
         <S.Section id={"aboutme"}>
           <AboutMe />
-        </S.Section> */}
+        </S.Section>
 
         <SectionHeader text={"say hello"} />
 

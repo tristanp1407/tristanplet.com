@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-let tileWidth = "300px";
+let tileWidth = "320px";
 
 export const OneProject = styled.div`
   display: flex;
@@ -83,6 +83,7 @@ export const ToolsList = styled.div`
   flex-wrap: wrap;
   align-items: flex-start;
   margin-top: 10px;
+  max-width: ${tileWidth};
 `;
 
 export const ToolPill = styled.div`
