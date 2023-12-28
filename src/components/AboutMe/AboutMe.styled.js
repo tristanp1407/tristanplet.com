@@ -10,4 +10,5 @@ export const Copy = styled.p`
   color: ${(props) => props.theme.fontColor};
   line-height: 200%;
   text-align: center;
+  font-size: 20px !important;
 `;
