@@ -30,7 +30,10 @@ export default function Hello() {
         />
       </S.TypewriterWrapper>
 
-      <h1>I'm Tristan, welcome to my portfolio 👋</h1>
+      <h1>
+        I'm Tristan, excited to team up with you
+        <br /> on your digital adventure 👋
+      </h1>
     </S.Container>
   );
 }
