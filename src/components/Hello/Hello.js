@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./Hello.styled";
 import Typewriter from "typewriter-effect";
-import ProfilePhoto from "../../assets/images/profile_photo.jpg";
 
 export default function Hello() {
   return (
