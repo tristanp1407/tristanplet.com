@@ -35,7 +35,7 @@ export default function HomePage(theme) {
 
         <SectionHeader text={"about me"} />
 
-        <S.Section id={"aboutme"}>
+        <S.Section id={"aboutme"} alignItems="center">
           <AboutMe />
         </S.Section>
 

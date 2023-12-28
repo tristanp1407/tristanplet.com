@@ -3,7 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   margin-bottom: 100px;
+  max-width: 800px;
 `;
 
 export const Copy = styled.p`
