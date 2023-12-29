@@ -17,7 +17,7 @@ export default function HomePage(theme) {
           <Hello />
         </S.Section>
 
-        <SectionHeader text={"some things I've built"} />
+        <SectionHeader text={"Some things I've built"} />
 
         <S.Section id={"projects"} alignItems={"center"}>
           <Projects />
@@ -33,13 +33,13 @@ export default function HomePage(theme) {
           <Accordion />
         </S.Section> */}
 
-        <SectionHeader text={"about me"} />
+        <SectionHeader text={"About me"} />
 
         <S.Section id={"aboutme"} alignItems="center">
           <AboutMe />
         </S.Section>
 
-        <SectionHeader text={"say hello"} />
+        <SectionHeader text={"Say hello"} />
 
         <S.Section id={"contact"} minHeight={"10vh"}>
           <Contact />

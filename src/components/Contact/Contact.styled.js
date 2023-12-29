@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 100px auto;
+  margin: 100px auto 200px;
 `;
 
 export const OneLink = styled.a`
