@@ -16,13 +16,11 @@ export default function AboutMe() {
       <S.Copy>
         At the intersection of <strong>coding and creativity</strong>, I
         specialize in all aspects of website creation, from the look and feel to
-        the behind-the-scenes functionality. Imagine having a website that's not
-        only sleek and professional but also fast, easy to maintain, and at the
-        forefront of design. From engaging small business websites to bespoke
-        web applications, my work is designed to impress and perform. With a
-        deep understanding of integrating analytics, I go beyond simple
-        aesthetics to deliver a site that truly connects with your audience and
-        drives engagement.
+        the behind-the-scenes functionality. From engaging small business
+        websites to bespoke web applications, my work is designed to impress and
+        perform. With a deep understanding of integrating analytics, I go beyond
+        simple aesthetics to deliver a site that truly connects with your
+        audience and drives engagement.
       </S.Copy>
 
       <S.Copy>
