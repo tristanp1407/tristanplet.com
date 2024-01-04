@@ -50,7 +50,7 @@ export default function Projects() {
       description:
         "An old project of mine: An e-commerce site linked to Instagram to sell clothes online.",
       image: PeelLogo,
-      link: "https://peelstudio.square.site/",
+      link: "https://peelstudio.square.site/s/shop",
       tools: [tools.square, tools.instagram, tools.meta],
     },
   ];
