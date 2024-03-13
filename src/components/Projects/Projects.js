@@ -55,7 +55,7 @@ const Projects = ({ data }) => {
           <TextContainer>
             <Title>{title}</Title>
             <Text>{text}</Text>
-            <Button variant="outlined" href={href}>
+            <Button variant="outlined" href={href} target="_blank">
               browse
             </Button>
           </TextContainer>
