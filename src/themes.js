@@ -28,8 +28,13 @@ const GlobalStyles = createGlobalStyle`
 
 }
 
-body{
-    background-color: ${(props) => props.theme.body};
+html {
+     background-color: "#041C32";
+}
+
+body {
+   background-color: "#041C32";
+;
     @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap');
     font-family: 'Rubik', sans-serif !important;
     font-weight: 300;
