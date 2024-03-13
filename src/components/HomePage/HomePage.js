@@ -9,6 +9,7 @@ import SkillCards from "../SkillCards/SkillCards";
 import Contact from "../Contact/Contact";
 import StickyPaperButton from "../StickyButton/StickyButton";
 import Button from "../Button/Button";
+import Projects from "../Projects/Projects";
 
 export default function BasicTabs(theme) {
   const [value, setValue] = useState(0);
@@ -37,7 +38,7 @@ export default function BasicTabs(theme) {
           <S.Tab label="Portfolio" />
         </S.Tabs>
       </Box>
-      <TabPanel role="tabpanel" hidden={value !== 0}>
+      <TabPanel role="tabpanel" hidden={value !== 0} value={0} index={0}>
         <Box sx={{ marginTop: { xs: "10vh", sm: "20vh" } }}>
           <Hello />
           <Box>
@@ -50,11 +51,32 @@ export default function BasicTabs(theme) {
           <SkillCards />
         </Box>
       </TabPanel>
-      <TabPanel role="tabpanel" hidden={value !== 1}></TabPanel>
+      <TabPanel role="tabpanel" hidden={value !== 1} value={1} index={1}>
+        <Box mt="10vh">
+          <Projects
+            data={[
+              {
+                title: "Octopus Electric Vehicles",
+                text: "Helping thousands shops for EVs everyday. Browse, spec-up and buy cars online.",
+                href: "https://octopusev.com",
+                frontImageUrl: "/img/projects/oev-front.png",
+                backImageUrl: "/img/projects/oev-back.png",
+              },
+              {
+                title: "My Persian Kitchen",
+                text: "Persian cuisine to your door. Browse blog articles and view the menu online.",
+                href: "#",
+                frontImageUrl: "/img/projects/mpk-front.png",
+                backImageUrl: "/img/projects/mpk-back.png",
+              },
+            ]}
+          />
+        </Box>
+      </TabPanel>
       <Box sx={{ marginTop: { xs: 7, sm: 15 } }}>
         <Contact setValue={setValue} value={value} />
       </Box>
-      <StickyPaperButton />
+      <StickyPaperButton style={{ zIndex: 9999 }} />
     </Box>
   );
 }
