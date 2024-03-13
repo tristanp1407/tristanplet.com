@@ -1,8 +1,10 @@
 import React from "react";
 import { IconContext } from "react-icons";
-import { RiGithubFill, RiLinkedinBoxFill } from "react-icons/ri";
-import { HiOutlineMail } from "react-icons/hi";
-import * as S from "./Contact.styled";
+import { RiLinkedinBoxFill } from "react-icons/ri";
+import { FaFileDownload } from "react-icons/fa";
+import Button from "../Button/Button";
+import downloadPDF from "../../utils/downloadCv";
+import Box from "@mui/material/Box";
 
 export default function Contact(props) {
   const openMe = (link) => {
@@ -13,19 +15,31 @@ export default function Contact(props) {
     <IconContext.Provider
       value={{ color: (props) => props.theme.fontColor, size: "50px" }}
     >
-      <S.Wrapper>
-        <S.OneLink onClick={() => openMe("https://github.com/tristanp1407")}>
-          <RiGithubFill />
-        </S.OneLink>
-        <S.OneLink
+      <Box
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="center"
+        alignItems="center"
+        gap={2}
+      >
+        <Button
           onClick={() => openMe("https://www.linkedin.com/in/tristan-plet")}
+          startIcon={<RiLinkedinBoxFill variant="outlined" size={25} />}
         >
-          <RiLinkedinBoxFill />
-        </S.OneLink>
-        <S.OneLink href="mailto:tristan.plet@gmail.com">
-          <HiOutlineMail />
-        </S.OneLink>
-      </S.Wrapper>
+          Connect
+        </Button>
+        <Button
+          onClick={() => downloadPDF()}
+          startIcon={<FaFileDownload size={25} />}
+        >
+          view CV
+        </Button>
+        {props.value !== 1 && (
+          <Button variant="outlined" onClick={() => props.setValue(1)}>
+            See portfolio
+          </Button>
+        )}
+      </Box>
     </IconContext.Provider>
   );
 }

@@ -30,10 +30,9 @@ export default function Hello() {
         />
       </S.TypewriterWrapper>
 
-      <h1>
-        I'm Tristan, excited to team up with you
-        <br /> on your digital adventure 👋
-      </h1>
+      <h2 style={{ maxWidth: 470 }}>
+        I'm Tristan, excited to team up with you on your digital adventure 👋
+      </h2>
     </S.Container>
   );
 }

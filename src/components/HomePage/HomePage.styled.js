@@ -1,5 +1,31 @@
 import styled from "styled-components";
+import MuiTab from "@mui/material/Tab";
+import MuiTabs from "@mui/material/Tabs";
+
 import { pageWidth } from "../../themes";
+
+export const Tabs = styled(MuiTabs)`
+  .MuiTabs-indicator {
+    background-color: ${(props) => props.theme.highlight};
+  },
+
+`;
+
+export const Tab = styled(MuiTab)`
+  color: ${(props) => props.theme.fontColor};
+
+  font-size: 12px;
+  padding: 0 5px;
+
+  &.Mui-selected {
+    color: ${(props) => props.theme.highlight};
+  }
+
+  @media (min-width: 450px) {
+    padding: 0 30px;
+    font-size: 16px;
+  }
+`;
 
 export const Document = styled.div`
   background-color: ${(props) => props.theme.body};

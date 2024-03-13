@@ -1,17 +1,18 @@
 import { createGlobalStyle } from "styled-components";
 
+const HIGHLIGHT = "#ECB365";
+
 export const lightTheme = {
   body: "#fbfbff",
   fontColor: "#2f2f2f",
+  highlight: HIGHLIGHT,
   backgroundColor: "#2E2541",
 };
 
 export const darkTheme = {
-  // backgroundColor: "#101313",
-  // backgroundColor: "#181A24",
-  // backgroudColor: "#17101A",
-  body: "#181A24",
+  body: "#041C32",
   fontColor: "#f2f2f2",
+  highlight: HIGHLIGHT,
 };
 
 export const pageWidth = "1200px";

@@ -2,19 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   color: ${(props) => props.theme.fontColor};
-
-  margin-top: 25vh;
-  /* @media (max-width: 768px) {
-    margin: auto;
-  } */
-  h1 {
+  h2 {
     font-weight: 300;
-    line-height: 60px;
+    line-height: 40px;
   }
 `;
 
 export const TypewriterWrapper = styled.span`
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
 `;
 
