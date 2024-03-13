@@ -20,7 +20,8 @@ export default function Contact(props) {
         flexWrap="wrap"
         justifyContent="center"
         alignItems="center"
-        gap={2}
+        gap={4}
+        mx={5}
       >
         <Button
           onClick={() => openMe("https://www.linkedin.com/in/tristan-plet")}

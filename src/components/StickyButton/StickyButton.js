@@ -18,7 +18,9 @@ const StickyPaperButton = () => {
 
   return (
     <Slide direction="up" in={showButton} mountOnEnter unmountOnExit>
-      <Box sx={{ position: "fixed", bottom: 16, right: 16 }}>
+      <Box
+        sx={{ position: "fixed", bottom: 16, right: 16, textAlign: "right" }}
+      >
         <Paper
           elevation={3}
           sx={{
@@ -28,9 +30,9 @@ const StickyPaperButton = () => {
             border: "1px solid #102a42",
           }}
         >
-          <p style={{ color: "#f2f2f2", fontSize: 16, margin: "0 0 13px 0" }}>
-            Let's chat!
-          </p>
+          <h6 style={{ color: "#f2f2f2", fontSize: 16, margin: "0 0 13px 0" }}>
+            Project in the works? Let's chat!
+          </h6>
           <Button variant="outlined">Work With Me</Button>
         </Paper>
       </Box>
