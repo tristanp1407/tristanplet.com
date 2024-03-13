@@ -65,7 +65,7 @@ export default function BasicTabs(theme) {
               {
                 title: "My Persian Kitchen",
                 text: "Persian cuisine to your door. Browse blog articles and view the menu online.",
-                href: "#",
+                href: "https://mypersiankitchen.co.uk",
                 frontImageUrl: "/img/projects/mpk-front.png",
                 backImageUrl: "/img/projects/mpk-back.png",
               },
