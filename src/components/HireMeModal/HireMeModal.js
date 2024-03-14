@@ -77,6 +77,11 @@ const HireMeModal = ({ open, setOpen }) => {
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
+        sx={{
+          "&:focus": {
+            outline: "none",
+          },
+        }}
       >
         <Box sx={style}>
           <IconButton

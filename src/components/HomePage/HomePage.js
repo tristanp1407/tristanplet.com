@@ -14,7 +14,7 @@ import HireMeModal from "../HireMeModal/HireMeModal";
 
 export default function BasicTabs(theme) {
   const [value, setValue] = useState(0);
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
