@@ -7,12 +7,14 @@ import * as S from "./HomePage.styled";
 import TabPanel from "../TabPanel/TabPanel";
 import SkillCards from "../SkillCards/SkillCards";
 import Contact from "../Contact/Contact";
-import StickyPaperButton from "../StickyButton/StickyButton";
+import StickyButton from "../StickyButton/StickyButton";
 import Button from "../Button/Button";
 import Projects from "../Projects/Projects";
+import HireMeModal from "../HireMeModal/HireMeModal";
 
 export default function BasicTabs(theme) {
   const [value, setValue] = useState(0);
+  const [open, setOpen] = useState(true);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -38,8 +40,15 @@ export default function BasicTabs(theme) {
           <S.Tab label="Portfolio" />
         </S.Tabs>
       </Box>
+
+      {/* First panel */}
       <TabPanel role="tabpanel" hidden={value !== 0} value={0} index={0}>
-        <Box sx={{ marginTop: { xs: "10vh", sm: "20vh" } }}>
+        <Box
+          sx={{
+            marginTop: { xs: "10vh", sm: "20vh" },
+            marginLeft: { sm: "25px" },
+          }}
+        >
           <Hello />
           <Box>
             <Button variant="outlined" onClick={() => setValue(1)}>
@@ -47,10 +56,13 @@ export default function BasicTabs(theme) {
             </Button>
           </Box>
         </Box>
+
         <Box sx={{ marginTop: { xs: 10, sm: 20 } }}>
           <SkillCards />
         </Box>
       </TabPanel>
+
+      {/* Second panel */}
       <TabPanel role="tabpanel" hidden={value !== 1} value={1} index={1}>
         <Box mt="10vh">
           <Projects
@@ -73,10 +85,14 @@ export default function BasicTabs(theme) {
           />
         </Box>
       </TabPanel>
+
       <Box sx={{ marginTop: { xs: 7, sm: 15 } }}>
         <Contact setValue={setValue} value={value} />
       </Box>
-      <StickyPaperButton style={{ zIndex: 9999 }} />
+
+      <StickyButton setOpen={setOpen} />
+
+      <HireMeModal open={open} setOpen={setOpen} />
     </Box>
   );
 }

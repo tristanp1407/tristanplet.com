@@ -3,7 +3,7 @@ import { Paper, Box, Slide } from "@mui/material";
 
 import Button from "../Button/Button";
 
-const StickyPaperButton = () => {
+const StickyPaperButton = ({ setOpen }) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -33,7 +33,9 @@ const StickyPaperButton = () => {
           <h6 style={{ color: "#f2f2f2", fontSize: 16, margin: "0 0 13px 0" }}>
             Project in the works? Let's chat!
           </h6>
-          <Button variant="outlined">Work With Me</Button>
+          <Button variant="outlined" onClick={() => setOpen(true)}>
+            Work With Me
+          </Button>
         </Paper>
       </Box>
     </Slide>
