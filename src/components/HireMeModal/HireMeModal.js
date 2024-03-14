@@ -77,8 +77,13 @@ const HireMeModal = ({ open, setOpen }) => {
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
+        disableEnforceFocus
+        disableRestoreFocus
         sx={{
           "&:focus": {
+            outline: "none",
+          },
+          "& .MuiBackdrop-root": {
             outline: "none",
           },
         }}

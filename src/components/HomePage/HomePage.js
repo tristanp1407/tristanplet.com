@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Box from "@mui/material/Box";
 
@@ -15,6 +15,12 @@ import HireMeModal from "../HireMeModal/HireMeModal";
 export default function BasicTabs(theme) {
   const [value, setValue] = useState(0);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setOpen(true), 6000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
