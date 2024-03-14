@@ -19,7 +19,7 @@ const HireMeModal = ({ open, setOpen }) => {
     left: "50%",
     transform: "translate(-50%, -50%)",
     maxWidth: 400,
-    width: "95vw",
+    width: "75vw",
     bgcolor: "#041C32",
     border: "1px solid #102a42",
     borderRadius: 3,
@@ -104,7 +104,7 @@ const HireMeModal = ({ open, setOpen }) => {
           </Box>
           <h3 style={{ color: "#f2f2f2", marginBottom: 15 }}>
             Get in touch for a{" "}
-            <span style={{ color: "#ECB365" }}>free consultation</span>,
+            <span style={{ color: "#ECB365" }}>free consultation</span>
           </h3>
           <p style={{ color: "#f2f2f2", marginTop: 0, fontSize: "18px" }}>
             I'd love to hear from you!
