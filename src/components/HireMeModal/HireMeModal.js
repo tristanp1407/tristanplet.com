@@ -28,9 +28,9 @@ const HireMeModal = ({ open, setOpen }) => {
   };
 
   const items = [
-    { emoji: "🌐", text: "Need a new website, online shop or brand?" },
-    { emoji: "✨", text: "Want to improve a current website?" },
-    { emoji: "👨‍💻", text: "Need a software engineer to work with you?" },
+    { emoji: "🌐", text: "Website, online shop and brand development" },
+    { emoji: "✨", text: "Improve a current website" },
+    { emoji: "👨‍💻", text: "Software engineer to join your team" },
   ];
 
   const iconButtonProps = {
