@@ -113,7 +113,7 @@ const HireMeModal = ({ open, setOpen }) => {
             <IconButton
               {...iconButtonProps}
               onClick={() =>
-                window.open("https://wa.me/447807462252", "_blank")
+                window.open("https://wa.me/+525539381634", "_blank")
               }
             >
               <FaWhatsapp size="50px" />
