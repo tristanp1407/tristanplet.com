@@ -81,6 +81,13 @@ export default function BasicTabs(theme) {
                 backImageUrl: "/img/projects/oev-back.png",
               },
               {
+                title: "Ananda Teertha",
+                text: "Book mindfulness coaching online and buy the author's book — a worldwide best-seller.",
+                href: "https://anandateertha.com",
+                frontImageUrl: "/img/projects/ananda_teertha_1.png",
+                backImageUrl: "/img/projects/ananda_teertha_2.png",
+              },
+              {
                 title: "My Persian Kitchen",
                 text: "Persian cuisine to your door. Browse blog articles and view the menu online.",
                 href: "https://mypersiankitchen.co.uk",
