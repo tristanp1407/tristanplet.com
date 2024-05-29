@@ -82,7 +82,7 @@ export default function BasicTabs(theme) {
               },
               {
                 title: "Sophie Simone Designs",
-                text: "Shop for unique, handmade gold and silver jewelry and accessories online.",
+                text: "Shop online for unique, handmade gold and silver jewelry and accessories.",
                 href: "https://sophiesimonedesigns.com",
                 frontImageUrl: "/img/projects/ssd_1.png",
                 backImageUrl: "/img/projects/ssd_2.png",
