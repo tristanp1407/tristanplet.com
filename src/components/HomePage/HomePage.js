@@ -81,6 +81,13 @@ export default function BasicTabs(theme) {
                 backImageUrl: "/img/projects/oev-back.png",
               },
               {
+                title: "Sophie Simone Designs",
+                text: "Shop for unique, handmade gold and silver jewelry and accessories online.",
+                href: "https://sophiesimonedesigns.com",
+                frontImageUrl: "/img/projects/ssd_1.png",
+                backImageUrl: "/img/projects/ssd_2.png",
+              },
+              {
                 title: "Ananda Teertha",
                 text: "Book mindfulness coaching online and buy the author's book — a worldwide best-seller.",
                 href: "https://anandateertha.com",

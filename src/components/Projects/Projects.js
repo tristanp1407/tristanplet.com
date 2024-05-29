@@ -22,6 +22,7 @@ const ImageContainer = styled.div`
   max-width: 500px;
   min-width: 300px;
   z-index: 0;
+  cursor: pointer;
 `;
 
 const TextContainer = styled.div`
@@ -46,7 +47,7 @@ const Projects = ({ data }) => {
     <Box display="flex" flexDirection="column" sx={{ gap: { xs: 3, sm: 5 } }}>
       {data.map(({ title, text, href, frontImageUrl, backImageUrl }) => (
         <Container key={title}>
-          <ImageContainer>
+          <ImageContainer onClick={() => window.open(href, "_blank")}>
             <LaptopScreenComponent
               frontImageUrl={frontImageUrl}
               backImageUrl={backImageUrl}
