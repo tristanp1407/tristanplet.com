@@ -34,7 +34,7 @@ const StickyPaperButton = ({ setOpen }) => {
             Project in the works? Let's chat!
           </h6>
           <Button variant="outlined" onClick={() => setOpen(true)}>
-            Work With Me
+            Free Consultation
           </Button>
         </Paper>
       </Box>

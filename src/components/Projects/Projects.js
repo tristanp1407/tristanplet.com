@@ -1,3 +1,4 @@
+// Projects.jsx
 import React from "react";
 import styled from "styled-components";
 import Box from "@mui/material/Box";
@@ -45,23 +46,35 @@ const Text = styled.p`
 const Projects = ({ data }) => {
   return (
     <Box display="flex" flexDirection="column" sx={{ gap: { xs: 3, sm: 5 } }}>
-      {data.map(({ title, text, href, frontImageUrl, backImageUrl }) => (
-        <Container key={title}>
-          <ImageContainer onClick={() => window.open(href, "_blank")}>
-            <LaptopScreenComponent
-              frontImageUrl={frontImageUrl}
-              backImageUrl={backImageUrl}
-            />
-          </ImageContainer>
-          <TextContainer>
-            <Title>{title}</Title>
-            <Text>{text}</Text>
-            <Button variant="outlined" href={href} target="_blank">
-              browse
-            </Button>
-          </TextContainer>
-        </Container>
-      ))}
+      {data.map(
+        ({
+          title,
+          text,
+          href,
+          frontImageUrl,
+          backImageUrl,
+          ismobile = false,
+        }) => (
+          <Container key={title}>
+            <ImageContainer onClick={() => href && window.open(href, "_blank")}>
+              <LaptopScreenComponent
+                frontImageUrl={frontImageUrl}
+                backImageUrl={backImageUrl}
+                ismobile={ismobile}
+              />
+            </ImageContainer>
+            <TextContainer>
+              <Title>{title}</Title>
+              <Text>{text}</Text>
+              {href && (
+                <Button variant="outlined" href={href} target="_blank">
+                  Browse
+                </Button>
+              )}
+            </TextContainer>
+          </Container>
+        )
+      )}
     </Box>
   );
 };

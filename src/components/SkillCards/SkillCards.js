@@ -48,6 +48,11 @@ const GridOfTextBoxes = () => {
       copy: "Custom websites that align with your brand, engage your audience, and drive business goals with seamless functionality and cutting-edge design.",
     },
     {
+      icon: "📱",
+      title: "Mobile Apps",
+      copy: "Develop intuitive and engaging mobile applications for iOS and Android platforms to reach your customers on the go.",
+    },
+    {
       icon: "🎨",
       title: "Branding",
       copy: "Transform your idea into a captivating reality with a custom logo and website that encapsulates your brand's unique identity.",

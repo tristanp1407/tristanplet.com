@@ -1,78 +1,107 @@
+// LaptopScreenComponent.jsx
 import React, { useState } from "react";
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Paper from "@mui/material/Paper";
 
 const LaptopScreen = styled.div`
   position: relative;
-  width: 100%;
-  padding-top: 56.25%; // This maintains an aspect ratio
+  overflow: visible;
+  max-width: 100%;
+  margin: 0 auto;
+  ${({ ismobile }) =>
+    ismobile
+      ? `
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        max-height: 400px;
+      `
+      : `
+        height: 0;
+        padding-top: 56.25%;
+      `}
 `;
 
 const OverlappingImage = styled(Paper)`
   position: absolute;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 8px;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-origin: center;
 `;
 
 const BackImage = styled(OverlappingImage)`
-  top: 15%;
-  left: 15%;
-  width: 80%;
-  height: 80%;
+  top: ${({ ismobile }) => (ismobile ? "0" : "15%")};
+  left: ${({ ismobile }) => (ismobile ? "0" : "15%")};
+  width: ${({ ismobile }) => (ismobile ? "100%" : "80%")};
+  height: ${({ ismobile }) => (ismobile ? "100%" : "80%")};
   z-index: 1;
-  transform: ${({ isHovered }) =>
-    isHovered
+  transform: ${({ isHovered, isHoveredBack, ismobile }) =>
+    ismobile
+      ? isHoveredBack
+        ? "scale(1.2)"
+        : "scale(1)"
+      : isHovered
       ? "scale(1.1) translateX(5%) translateY(5%)"
       : "translateX(0) translateY(0)"};
 
-  // Hide on mobile devices
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
-
-const frontImageMobileStyle = css`
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  ${({ ismobile }) =>
+    ismobile &&
+    `
+      position: relative;
+      width: 45%;
+      aspect-ratio: 9 / 20;
+      max-height: 400px;
+    `}
 `;
 
 const FrontImage = styled(OverlappingImage)`
   top: 0;
   left: 0;
-  width: 70%;
-  height: 70%;
+  width: ${({ ismobile }) => (ismobile ? "100%" : "70%")};
+  height: ${({ ismobile }) => (ismobile ? "100%" : "70%")};
   z-index: 2;
-  transform: ${({ isHovered }) =>
-    isHovered
+  transform: ${({ isHovered, isHoveredFront, ismobile }) =>
+    ismobile
+      ? isHoveredFront
+        ? "scale(1.2)"
+        : "scale(1)"
+      : isHovered
       ? "scale(0.5) translateX(-10%) translateY(-10%)"
       : "translateX(0) translateY(0)"};
 
-  @media (max-width: 768px) {
-    ${frontImageMobileStyle}
-    transform: none
-  }
+  ${({ ismobile }) =>
+    ismobile &&
+    `
+      position: relative;
+      width: 45%;
+      aspect-ratio: 9 / 20;
+      max-height: 400px;
+    `}
+`;
+
+const SideBySideContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
 `;
 
 const ImageWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: ${({ ismobile }) => (ismobile ? "center" : "flex-start")};
 `;
 
 const StyledImage = styled.img`
-  min-width: 100%;
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: top;
+  border-radius: 8px;
 `;
 
 const shineAnimation = keyframes`
@@ -90,6 +119,7 @@ const LoadingOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.8);
   background-image: linear-gradient(
     to right,
@@ -102,47 +132,103 @@ const LoadingOverlay = styled.div`
   animation: ${shineAnimation} 1.5s infinite;
 `;
 
-const LaptopScreenComponent = ({ frontImageUrl, backImageUrl }) => {
+const LaptopScreenComponent = ({
+  frontImageUrl,
+  backImageUrl,
+  ismobile = false,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isHoveredFront, setIsHoveredFront] = useState(false);
+  const [isHoveredBack, setIsHoveredBack] = useState(false);
+  const [isLoadingFront, setIsLoadingFront] = useState(true);
+  const [isLoadingBack, setIsLoadingBack] = useState(true);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+  const handleImageLoadFront = () => setIsLoadingFront(false);
+  const handleImageLoadBack = () => setIsLoadingBack(false);
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  const handleMouseEnterFront = () => setIsHoveredFront(true);
+  const handleMouseLeaveFront = () => setIsHoveredFront(false);
 
-  const handleImageLoad = () => {
-    setIsLoading(false);
-  };
+  const handleMouseEnterBack = () => setIsHoveredBack(true);
+  const handleMouseLeaveBack = () => setIsHoveredBack(false);
 
   return (
-    <LaptopScreen
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      <BackImage elevation={2} isHovered={isHovered}>
-        <ImageWrapper>
-          <StyledImage
-            src={backImageUrl}
-            alt="Back Image"
-            onLoad={handleImageLoad}
-          />
-        </ImageWrapper>
-        {isLoading && <LoadingOverlay />}
-      </BackImage>
-      <FrontImage elevation={isHovered ? 8 : 4} isHovered={isHovered}>
-        <ImageWrapper>
-          <StyledImage
-            src={frontImageUrl}
-            alt="Front Image"
-            onLoad={handleImageLoad}
-          />
-        </ImageWrapper>
-        {isLoading && <LoadingOverlay />}
-      </FrontImage>
+    <LaptopScreen ismobile={ismobile}>
+      {ismobile ? (
+        <SideBySideContainer>
+          <BackImage
+            elevation={2}
+            isHoveredBack={isHoveredBack}
+            ismobile={ismobile}
+            onMouseEnter={handleMouseEnterBack}
+            onMouseLeave={handleMouseLeaveBack}
+          >
+            <ImageWrapper ismobile={ismobile}>
+              <StyledImage
+                src={backImageUrl}
+                alt="Back Image"
+                onLoad={handleImageLoadBack}
+              />
+            </ImageWrapper>
+            {isLoadingBack && <LoadingOverlay />}
+          </BackImage>
+          <FrontImage
+            elevation={2}
+            isHoveredFront={isHoveredFront}
+            ismobile={ismobile}
+            onMouseEnter={handleMouseEnterFront}
+            onMouseLeave={handleMouseLeaveFront}
+          >
+            <ImageWrapper ismobile={ismobile}>
+              <StyledImage
+                src={frontImageUrl}
+                alt="Front Image"
+                onLoad={handleImageLoadFront}
+              />
+            </ImageWrapper>
+            {isLoadingFront && <LoadingOverlay />}
+          </FrontImage>
+        </SideBySideContainer>
+      ) : (
+        <>
+          {backImageUrl && (
+            <BackImage
+              elevation={2}
+              isHovered={isHovered}
+              ismobile={ismobile}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <ImageWrapper ismobile={ismobile}>
+                <StyledImage
+                  src={backImageUrl}
+                  alt="Back Image"
+                  onLoad={handleImageLoadBack}
+                />
+              </ImageWrapper>
+              {isLoadingBack && <LoadingOverlay />}
+            </BackImage>
+          )}
+          <FrontImage
+            elevation={isHovered ? 8 : 4}
+            isHovered={isHovered}
+            ismobile={ismobile}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <ImageWrapper ismobile={ismobile}>
+              <StyledImage
+                src={frontImageUrl}
+                alt="Front Image"
+                onLoad={handleImageLoadFront}
+              />
+            </ImageWrapper>
+            {isLoadingFront && <LoadingOverlay />}
+          </FrontImage>
+        </>
+      )}
     </LaptopScreen>
   );
 };

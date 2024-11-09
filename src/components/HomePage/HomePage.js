@@ -1,7 +1,6 @@
+// HomePage.jsx
 import React, { useState, useEffect } from "react";
-
 import Box from "@mui/material/Box";
-
 import Hello from "../Hello/Hello";
 import * as S from "./HomePage.styled";
 import TabPanel from "../TabPanel/TabPanel";
@@ -79,6 +78,13 @@ export default function BasicTabs(theme) {
                 href: "https://octopusev.com",
                 frontImageUrl: "/img/projects/oev-front.png",
                 backImageUrl: "/img/projects/oev-back.png",
+              },
+              {
+                title: "PickEasy Mobile App",
+                text: "Save your favourite places to go out to help your friends make better decisions.",
+                frontImageUrl: "/img/projects/pickeasy_1.png",
+                backImageUrl: "/img/projects/pickeasy_2.png",
+                ismobile: true,
               },
               {
                 title: "Sophie Simone Designs",
