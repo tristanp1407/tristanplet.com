@@ -80,7 +80,7 @@ export default function BasicTabs(theme) {
                 backImageUrl: "/img/projects/oev-back.png",
               },
               {
-                title: "PickEasy Mobile App",
+                title: "PickEasy",
                 text: "Save your favourite places to go out to help your friends make better decisions.",
                 frontImageUrl: "/img/projects/pickeasy_1.png",
                 backImageUrl: "/img/projects/pickeasy_2.png",
