@@ -1,5 +1,5 @@
 // HomePage.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Hello from "../Hello/Hello";
 import * as S from "./HomePage.styled";
@@ -8,16 +8,10 @@ import SkillCards from "../SkillCards/SkillCards";
 import Contact from "../Contact/Contact";
 import Button from "../Button/Button";
 import Projects from "../Projects/Projects";
+import CompaniesBanner from "../CompaniesBanner/CompaniesBanner";
 
-export default function BasicTabs(theme) {
+const HomePage = () => {
   const [value, setValue] = useState(0);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setOpen(true), 6000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -28,8 +22,8 @@ export default function BasicTabs(theme) {
       sx={{
         width: "100%",
         maxWidth: "1200px",
-        marginX: "auto",
-        padding: "2rem 0",
+        mx: "auto",
+        py: "2rem",
       }}
       mb={20}
     >
@@ -37,8 +31,8 @@ export default function BasicTabs(theme) {
         display="flex"
         justifyContent="flex-end"
         sx={{
-          marginTop: { xs: 1, sm: 3 },
-          marginRight: { xs: 1, sm: 4 },
+          mt: { xs: 1, sm: 3 },
+          mr: { xs: 1, sm: 4 },
           gap: { xs: 1, sm: 3 },
         }}
       >
@@ -52,12 +46,12 @@ export default function BasicTabs(theme) {
         </S.Tabs>
       </Box>
 
-      {/* First panel */}
+      {/* First Panel */}
       <TabPanel role="tabpanel" hidden={value !== 0} value={0} index={0}>
         <Box
           sx={{
-            marginTop: { xs: "10vh", sm: "20vh" },
-            marginLeft: { sm: "25px" },
+            mt: { xs: "10vh", sm: "20vh" },
+            ml: { sm: "25px" },
           }}
         >
           <Hello />
@@ -68,12 +62,17 @@ export default function BasicTabs(theme) {
           </Box>
         </Box>
 
-        <Box sx={{ marginTop: { xs: 10, sm: 20 } }}>
+        {/* Companies Banner */}
+        <Box mt={30}>
+          <CompaniesBanner />
+        </Box>
+
+        <Box sx={{ mt: { xs: 10, sm: 20 } }}>
           <SkillCards />
         </Box>
       </TabPanel>
 
-      {/* Second panel */}
+      {/* Second Panel */}
       <TabPanel role="tabpanel" hidden={value !== 1} value={1} index={1}>
         <Box mt="10vh">
           <Projects
@@ -109,7 +108,7 @@ export default function BasicTabs(theme) {
               },
               {
                 title: "Deborah Tseng Jewellery",
-                text: "Explore poetic, sculptural jewelry from a talented London-based designer. ",
+                text: "Explore poetic, sculptural jewelry from a talented London-based designer.",
                 href: "https://deborahtseng.com",
                 frontImageUrl: "/img/projects/tseng-back.png",
                 backImageUrl: "/img/projects/tseng-front.png",
@@ -133,9 +132,11 @@ export default function BasicTabs(theme) {
         </Box>
       </TabPanel>
 
-      <Box sx={{ marginTop: { xs: 7, sm: 15 } }}>
+      <Box sx={{ mt: { xs: 7, sm: 15 } }}>
         <Contact setValue={setValue} value={value} />
       </Box>
     </Box>
   );
-}
+};
+
+export default HomePage;
