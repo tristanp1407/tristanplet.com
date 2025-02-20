@@ -80,7 +80,7 @@ const GridOfTextBoxes = () => {
   ];
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ maxWidth: 1200, margin: "auto", padding: "2rem 0" }}>
       <Grid container spacing={3} justifyContent="center">
         {textData.map((data, index) => (
           <Grid

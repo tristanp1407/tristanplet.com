@@ -53,14 +53,14 @@ const Projects = ({ data }) => {
           href,
           frontImageUrl,
           backImageUrl,
-          ismobile = false,
+          isMobile = false,
         }) => (
           <Container key={title}>
             <ImageContainer onClick={() => href && window.open(href, "_blank")}>
               <LaptopScreenComponent
                 frontImageUrl={frontImageUrl}
                 backImageUrl={backImageUrl}
-                ismobile={ismobile}
+                isMobile={isMobile}
               />
             </ImageContainer>
             <TextContainer>

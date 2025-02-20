@@ -6,10 +6,8 @@ import * as S from "./HomePage.styled";
 import TabPanel from "../TabPanel/TabPanel";
 import SkillCards from "../SkillCards/SkillCards";
 import Contact from "../Contact/Contact";
-import StickyButton from "../StickyButton/StickyButton";
 import Button from "../Button/Button";
 import Projects from "../Projects/Projects";
-import HireMeModal from "../HireMeModal/HireMeModal";
 
 export default function BasicTabs(theme) {
   const [value, setValue] = useState(0);
@@ -26,7 +24,15 @@ export default function BasicTabs(theme) {
   };
 
   return (
-    <Box sx={{ width: "100%" }} mb={20}>
+    <Box
+      sx={{
+        width: "100%",
+        maxWidth: "1200px",
+        marginX: "auto",
+        padding: "2rem 0",
+      }}
+      mb={20}
+    >
       <Box
         display="flex"
         justifyContent="flex-end"
@@ -73,25 +79,40 @@ export default function BasicTabs(theme) {
           <Projects
             data={[
               {
+                title: "Sync Savings",
+                text: "This secure web app seamlessly integrates with any payroll service, enabling automatic savings directly from your paycheque.",
+                href: "https://www.linkedin.com/company/sync-savings/posts/?feedView=all",
+                frontImageUrl: "/img/projects/sync-back.png",
+                backImageUrl: "/img/projects/sync-front.png",
+                isMobile: true,
+              },
+              {
                 title: "Octopus Electric Vehicles",
-                text: "Helping thousands shops for EVs everyday. Browse, spec-up and buy cars online.",
+                text: "Helping thousands shops for EVs everyday. Browse, spec-up and lease cars online.",
                 href: "https://octopusev.com",
                 frontImageUrl: "/img/projects/oev-front.png",
                 backImageUrl: "/img/projects/oev-back.png",
               },
               {
                 title: "PickEasy",
-                text: "Save your favourite places to go out to help your friends make better decisions.",
+                text: "Save your favorite places to eat, drink, and hang out, so your friends always know where to go for the best experiences!",
                 frontImageUrl: "/img/projects/pickeasy_1.png",
                 backImageUrl: "/img/projects/pickeasy_2.png",
-                ismobile: true,
+                isMobile: true,
               },
               {
                 title: "Sophie Simone Designs",
-                text: "Shop online for unique, handmade gold and silver jewelry and accessories.",
+                text: "Shop online for unique, handmade gold and silver jewelry inspired by Mexican nature.",
                 href: "https://sophiesimonedesigns.com",
                 frontImageUrl: "/img/projects/ssd_1.png",
                 backImageUrl: "/img/projects/ssd_2.png",
+              },
+              {
+                title: "Deborah Tseng Jewellery",
+                text: "Explore poetic, sculptural jewelry from a talented London-based designer. ",
+                href: "https://deborahtseng.com",
+                frontImageUrl: "/img/projects/tseng-back.png",
+                backImageUrl: "/img/projects/tseng-front.png",
               },
               {
                 title: "Ananda Teertha",
@@ -115,10 +136,6 @@ export default function BasicTabs(theme) {
       <Box sx={{ marginTop: { xs: 7, sm: 15 } }}>
         <Contact setValue={setValue} value={value} />
       </Box>
-
-      <StickyButton setOpen={setOpen} />
-
-      <HireMeModal open={open} setOpen={setOpen} />
     </Box>
   );
 }

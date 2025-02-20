@@ -8,8 +8,8 @@ const LaptopScreen = styled.div`
   overflow: visible;
   max-width: 100%;
   margin: 0 auto;
-  ${({ ismobile }) =>
-    ismobile
+  ${({ isMobile }) =>
+    isMobile
       ? `
         display: flex;
         flex-direction: row;
@@ -31,13 +31,13 @@ const OverlappingImage = styled(Paper)`
 `;
 
 const BackImage = styled(OverlappingImage)`
-  top: ${({ ismobile }) => (ismobile ? "0" : "15%")};
-  left: ${({ ismobile }) => (ismobile ? "0" : "15%")};
-  width: ${({ ismobile }) => (ismobile ? "100%" : "80%")};
-  height: ${({ ismobile }) => (ismobile ? "100%" : "80%")};
+  top: ${({ isMobile }) => (isMobile ? "0" : "15%")};
+  left: ${({ isMobile }) => (isMobile ? "0" : "15%")};
+  width: ${({ isMobile }) => (isMobile ? "100%" : "80%")};
+  height: ${({ isMobile }) => (isMobile ? "100%" : "80%")};
   z-index: 1;
-  transform: ${({ isHovered, isHoveredBack, ismobile }) =>
-    ismobile
+  transform: ${({ isHovered, isHoveredBack, isMobile }) =>
+    isMobile
       ? isHoveredBack
         ? "scale(1.2)"
         : "scale(1)"
@@ -45,8 +45,8 @@ const BackImage = styled(OverlappingImage)`
       ? "scale(1.1) translateX(5%) translateY(5%)"
       : "translateX(0) translateY(0)"};
 
-  ${({ ismobile }) =>
-    ismobile &&
+  ${({ isMobile }) =>
+    isMobile &&
     `
       position: relative;
       width: 45%;
@@ -58,11 +58,11 @@ const BackImage = styled(OverlappingImage)`
 const FrontImage = styled(OverlappingImage)`
   top: 0;
   left: 0;
-  width: ${({ ismobile }) => (ismobile ? "100%" : "70%")};
-  height: ${({ ismobile }) => (ismobile ? "100%" : "70%")};
+  width: ${({ isMobile }) => (isMobile ? "100%" : "70%")};
+  height: ${({ isMobile }) => (isMobile ? "100%" : "70%")};
   z-index: 2;
-  transform: ${({ isHovered, isHoveredFront, ismobile }) =>
-    ismobile
+  transform: ${({ isHovered, isHoveredFront, isMobile }) =>
+    isMobile
       ? isHoveredFront
         ? "scale(1.2)"
         : "scale(1)"
@@ -70,8 +70,8 @@ const FrontImage = styled(OverlappingImage)`
       ? "scale(0.5) translateX(-10%) translateY(-10%)"
       : "translateX(0) translateY(0)"};
 
-  ${({ ismobile }) =>
-    ismobile &&
+  ${({ isMobile }) =>
+    isMobile &&
     `
       position: relative;
       width: 45%;
@@ -93,7 +93,7 @@ const ImageWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: ${({ ismobile }) => (ismobile ? "center" : "flex-start")};
+  align-items: ${({ isMobile }) => (isMobile ? "center" : "flex-start")};
 `;
 
 const StyledImage = styled.img`
@@ -135,7 +135,7 @@ const LoadingOverlay = styled.div`
 const LaptopScreenComponent = ({
   frontImageUrl,
   backImageUrl,
-  ismobile = false,
+  isMobile = false,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isHoveredFront, setIsHoveredFront] = useState(false);
@@ -155,17 +155,17 @@ const LaptopScreenComponent = ({
   const handleMouseLeaveBack = () => setIsHoveredBack(false);
 
   return (
-    <LaptopScreen ismobile={ismobile}>
-      {ismobile ? (
+    <LaptopScreen isMobile={isMobile}>
+      {isMobile ? (
         <SideBySideContainer>
           <BackImage
             elevation={2}
             isHoveredBack={isHoveredBack}
-            ismobile={ismobile}
+            isMobile={isMobile}
             onMouseEnter={handleMouseEnterBack}
             onMouseLeave={handleMouseLeaveBack}
           >
-            <ImageWrapper ismobile={ismobile}>
+            <ImageWrapper isMobile={isMobile}>
               <StyledImage
                 src={backImageUrl}
                 alt="Back Image"
@@ -177,11 +177,11 @@ const LaptopScreenComponent = ({
           <FrontImage
             elevation={2}
             isHoveredFront={isHoveredFront}
-            ismobile={ismobile}
+            isMobile={isMobile}
             onMouseEnter={handleMouseEnterFront}
             onMouseLeave={handleMouseLeaveFront}
           >
-            <ImageWrapper ismobile={ismobile}>
+            <ImageWrapper isMobile={isMobile}>
               <StyledImage
                 src={frontImageUrl}
                 alt="Front Image"
@@ -197,11 +197,11 @@ const LaptopScreenComponent = ({
             <BackImage
               elevation={2}
               isHovered={isHovered}
-              ismobile={ismobile}
+              isMobile={isMobile}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <ImageWrapper ismobile={ismobile}>
+              <ImageWrapper isMobile={isMobile}>
                 <StyledImage
                   src={backImageUrl}
                   alt="Back Image"
@@ -214,11 +214,11 @@ const LaptopScreenComponent = ({
           <FrontImage
             elevation={isHovered ? 8 : 4}
             isHovered={isHovered}
-            ismobile={ismobile}
+            isMobile={isMobile}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <ImageWrapper ismobile={ismobile}>
+            <ImageWrapper isMobile={isMobile}>
               <StyledImage
                 src={frontImageUrl}
                 alt="Front Image"

@@ -31,7 +31,7 @@ export default function Hello() {
       </S.TypewriterWrapper>
 
       <h2 style={{ maxWidth: 470 }}>
-        I'm Tristan, I develop digital products for early-stage startups 👋
+        I'm Tristan, I build digital products for early-stage startups 👋
       </h2>
     </S.Container>
   );
