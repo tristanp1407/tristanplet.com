@@ -44,7 +44,7 @@ const GridOfTextBoxes = () => {
   const textData = [
     {
       icon: "🌐",
-      title: "Website Creation",
+      title: "Web Development",
       copy: "Custom websites that align with your brand, engage your audience, and drive business goals with seamless functionality and cutting-edge design.",
     },
     {
@@ -56,11 +56,6 @@ const GridOfTextBoxes = () => {
       icon: "🎨",
       title: "Branding",
       copy: "Transform your idea into a captivating reality with a custom logo and website that encapsulates your brand's unique identity.",
-    },
-    {
-      icon: "💻",
-      title: "Web Development",
-      copy: "Create smooth digital experiences, integrating databases and third-party services to support business and user needs.",
     },
     {
       icon: "⚙️",
